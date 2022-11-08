@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/curiosityFragment">
+
+    <fragment
+        android:id="@+id/curiosityFragment"
+        android:name="com.kubrayildirim.nasaapp.CuriosityFragment"
+        android:label="fragment_curiosity"
+        tools:layout="@layout/fragment_curiosity" />
+    <fragment
+        android:id="@+id/opportunityFragment"
+        android:name="com.kubrayildirim.nasaapp.OpportunityFragment"
+        android:label="fragment_opportunity"
+        tools:layout="@layout/fragment_opportunity" />
+    <fragment
+        android:id="@+id/spiritFragment"
+        android:name="com.kubrayildirim.nasaapp.SpiritFragment"
+        android:label="fragment_spirit"
+        tools:layout="@layout/fragment_spirit" />
+</navigation>
