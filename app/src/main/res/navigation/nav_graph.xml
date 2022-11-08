@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/curiosityFragment"
-        android:name="com.kubrayildirim.nasaapp.ui.CuriosityFragment"
+        android:name="com.kubrayildirim.nasaapp.ui.curiosity.CuriosityFragment"
         android:label="fragment_curiosity"
         tools:layout="@layout/fragment_curiosity" />
     <fragment

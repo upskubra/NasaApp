@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.CuriosityFragment">
+    tools:context=".ui.curiosity.CuriosityFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_curiosity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="visible"
+        app:indicatorColor="@color/transparent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_curiosity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/curiosity" />
-
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/item_row_curiosity" />
 </FrameLayout>
