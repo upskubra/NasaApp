@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/curiosityFragment"
-        android:name="com.kubrayildirim.nasaapp.CuriosityFragment"
+        android:name="com.kubrayildirim.nasaapp.ui.CuriosityFragment"
         android:label="fragment_curiosity"
         tools:layout="@layout/fragment_curiosity" />
     <fragment
         android:id="@+id/opportunityFragment"
-        android:name="com.kubrayildirim.nasaapp.OpportunityFragment"
+        android:name="com.kubrayildirim.nasaapp.ui.OpportunityFragment"
         android:label="fragment_opportunity"
         tools:layout="@layout/fragment_opportunity" />
     <fragment
         android:id="@+id/spiritFragment"
-        android:name="com.kubrayildirim.nasaapp.SpiritFragment"
+        android:name="com.kubrayildirim.nasaapp.ui.SpiritFragment"
         android:label="fragment_spirit"
         tools:layout="@layout/fragment_spirit" />
 </navigation>

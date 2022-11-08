@@ -1,9 +1,10 @@
-package com.kubrayildirim.nasaapp
+package com.kubrayildirim.nasaapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.kubrayildirim.nasaapp.R
 import com.kubrayildirim.nasaapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
