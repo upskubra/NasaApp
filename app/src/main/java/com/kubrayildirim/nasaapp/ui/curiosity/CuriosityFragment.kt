@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.kubrayildirim.nasaapp.adapter.CuriosityAdapter
+import com.kubrayildirim.nasaapp.adapter.BaseAdapter
 import com.kubrayildirim.nasaapp.data.model.Photo
 import com.kubrayildirim.nasaapp.databinding.FragmentCuriosityBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,7 +47,7 @@ class CuriosityFragment : Fragment() {
 
     private fun initRecycler(list: List<Photo>) {
         binding.rvCuriosity.apply {
-            adapter = CuriosityAdapter(list)
+            adapter = BaseAdapter(list)
         }
 
     }
