@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 else -> {
-                    navController.navigate(R.id.opportunityFragment)
+                    navController.navigate(R.id.spiritFragment)
                     true
                 }
             }

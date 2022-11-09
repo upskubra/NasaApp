@@ -18,7 +18,7 @@ interface NasaApiService {
         @Query("api_key") api_key: String = API_KEY
     ): Response<RoverModel>
 
-    @GET("rovers/spirit/photos?sol=2000")
+    @GET("rovers/spirit/photos?sol=1")
     suspend fun fetchSpirit(
         @Query("api_key") api_key: String = API_KEY
     ): Response<RoverModel>
