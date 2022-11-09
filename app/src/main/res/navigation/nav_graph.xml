@@ -12,12 +12,12 @@
         tools:layout="@layout/fragment_curiosity" />
     <fragment
         android:id="@+id/opportunityFragment"
-        android:name="com.kubrayildirim.nasaapp.ui.OpportunityFragment"
+        android:name="com.kubrayildirim.nasaapp.ui.opportunity.OpportunityFragment"
         android:label="fragment_opportunity"
         tools:layout="@layout/fragment_opportunity" />
     <fragment
         android:id="@+id/spiritFragment"
-        android:name="com.kubrayildirim.nasaapp.ui.SpiritFragment"
+        android:name="com.kubrayildirim.nasaapp.ui.spirit.SpiritFragment"
         android:label="fragment_spirit"
         tools:layout="@layout/fragment_spirit" />
 </navigation>
