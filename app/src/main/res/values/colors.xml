@@ -7,5 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
     <color name="transparent">#80AAAAAA</color>
+    <color name="mars_dirt">#EED5AE</color>
+    <color name="mars_red">#B3001B</color>
+    <color name="mars_gray">#627264</color>
+
 </resources>
