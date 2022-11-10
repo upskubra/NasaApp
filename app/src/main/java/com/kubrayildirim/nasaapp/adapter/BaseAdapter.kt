@@ -12,7 +12,8 @@ import com.kubrayildirim.nasaapp.databinding.ItemRowBinding
 import com.kubrayildirim.nasaapp.util.loadUrl
 
 class BaseAdapter(
-    private val photoList: List<Photo>
+    private val photoList: List<Photo>,
+    private val onClickListener: OnClickListener
 ) : ListAdapter<Photo, BaseAdapter.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,6 +28,9 @@ class BaseAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(photoList[position])
+        holder.itemView.setOnClickListener {
+            onClickListener.clickListener(photoList[position])
+        }
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -45,5 +49,9 @@ class BaseAdapter(
         override fun areContentsTheSame(oldItem: Photo, newItem: Photo): Boolean {
             return oldItem == newItem
         }
+    }
+
+    class OnClickListener(val clickListener: (photoList: Photo) -> Unit) {
+        fun onClick(photo: Photo) = clickListener(photo)
     }
 }
