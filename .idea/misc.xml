@@ -8,9 +8,11 @@
         <entry key="..\:/Users/devku/AndroidStudioProjects/NasaApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/devku/AndroidStudioProjects/NasaApp/app/src/main/res/layout/fragment_curiosity.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/devku/AndroidStudioProjects/NasaApp/app/src/main/res/layout/fragment_opportunity.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/devku/AndroidStudioProjects/NasaApp/app/src/main/res/layout/fragment_photo_info_dialog.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/devku/AndroidStudioProjects/NasaApp/app/src/main/res/layout/fragment_spirit.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/devku/AndroidStudioProjects/NasaApp/app/src/main/res/layout/item_row_curiosity.xml" value="0.10400000000000001" />
         <entry key="..\:/Users/devku/AndroidStudioProjects/NasaApp/app/src/main/res/menu/bottom_menu.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/devku/AndroidStudioProjects/NasaApp/app/src/main/res/menu/camera_menu.xml" value="0.23645833333333333" />
       </map>
     </option>
   </component>

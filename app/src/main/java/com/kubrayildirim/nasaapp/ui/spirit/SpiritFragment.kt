@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.kubrayildirim.nasaapp.adapter.BaseAdapter
 import com.kubrayildirim.nasaapp.data.model.Photo
 import com.kubrayildirim.nasaapp.databinding.FragmentSpiritBinding
+import com.kubrayildirim.nasaapp.ui.PhotoInfoDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -47,8 +48,9 @@ class SpiritFragment : Fragment() {
 
     private fun initRecycler(list: List<Photo>) {
         binding.rvSpirit.apply {
-            adapter = BaseAdapter(list)
+            adapter = BaseAdapter(list, BaseAdapter.OnClickListener {
+                PhotoInfoDialogFragment(it).show(childFragmentManager, PhotoInfoDialogFragment.TAG)
+            })
         }
-
     }
 }
