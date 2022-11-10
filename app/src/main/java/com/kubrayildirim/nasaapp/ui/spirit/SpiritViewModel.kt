@@ -24,13 +24,19 @@ class SpiritViewModel @Inject constructor(
         roverRepository.fetchSpirit().collect { result ->
             when (result) {
                 is NetworkResult.Success -> {
-                    _spiritState.value =
-                        result.data?.let {
-                            RoverViewState(
-                                photoList = it,
-                                isLoading = false
+                    val cameraList = HashSet<String>()
+                    result.data?.let { roverModel ->
+                        roverModel.photos.forEach {
+                            cameraList.add(it.camera.name)
+                        }
+                        _spiritState.update {
+                            it.copy(
+                                photoList = roverModel,
+                                isLoading = false,
+                                cameraList = cameraList
                             )
-                        }!!
+                        }
+                    }
                 }
                 is NetworkResult.Error -> {
                     _spiritState.update {

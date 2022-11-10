@@ -1,10 +1,10 @@
 package com.kubrayildirim.nasaapp.ui.curiosity
 
 import android.app.Application
+import com.kubrayildirim.nasaapp.data.model.RoverViewState
 import com.kubrayildirim.nasaapp.data.remote.NetworkResult
 import com.kubrayildirim.nasaapp.data.repository.RoverRepository
 import com.kubrayildirim.nasaapp.ui.BaseViewModel
-import com.kubrayildirim.nasaapp.data.model.RoverViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -24,13 +24,17 @@ class CuriosityViewModel @Inject constructor(
         roverRepository.fetchCuriosity().collect { result ->
             when (result) {
                 is NetworkResult.Success -> {
-                    _curiosityState.value =
-                        result.data?.let {
-                            RoverViewState(
-                                photoList = it,
-                                isLoading = false
-                            )
-                        }!!
+                    val cameraList = HashSet<String>()
+                    result.data?.let { roverModel ->
+                        roverModel.photos.forEach {
+                            cameraList.add(it.camera.name)
+                        }
+                        RoverViewState(
+                            photoList = roverModel,
+                            isLoading = false,
+                            cameraList = cameraList
+                        )
+                    }!!.also { _curiosityState.value = it }
                 }
                 is NetworkResult.Error -> {
                     _curiosityState.update {

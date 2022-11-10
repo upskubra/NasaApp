@@ -24,13 +24,19 @@ class OpportunityViewModel @Inject constructor(
         roverRepository.fetchOpportunity().collect { result ->
             when (result) {
                 is NetworkResult.Success -> {
-                    _opportunityState.value =
-                        result.data?.let {
-                            RoverViewState(
-                                photoList = it,
-                                isLoading = false
+                    val cameraList = HashSet<String>()
+                    result.data?.let { roverModel ->
+                        roverModel.photos.forEach {
+                            cameraList.add(it.camera.name)
+                        }
+                        _opportunityState.update {
+                            it.copy(
+                                photoList = roverModel,
+                                isLoading = false,
+                                cameraList = cameraList
                             )
-                        }!!
+                        }
+                    }
                 }
                 is NetworkResult.Error -> {
                     _opportunityState.update {
